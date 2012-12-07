@@ -1,0 +1,58 @@
+GameOfLife_0: The Android Game Of Life Tutorial
+
+This is a 'lightly hacked' version of a game of Life found on the internet.
+
+The original version is from the web site
+http://www.quesucede.com/page/show/id/conway_game_of_life_android
+which was last referenced on 11/21/2012 by bks.
+
+Since the tutorial is old (2010) and uses Android API level 7.
+If you try to import into a newer eclipse with the Android 4 plugins,
+you will get a faulty project; the build path libraries are not correct.
+
+These notes provide a way to create a new, Android 4.x eclipse project
+in which you can build and run the tutorial as it was published but
+under an updated Android API level.
+
+Steps to make and run the project from the original eclipse project:
+
+1. Create an 'empty' Android 4 project
+
+Use eclipse > new Android Project.
+Set the android version to 14, 15 or 16; these are Android 4.0.
+Set source path to match tutorial's original: com.quesucede.gameoflife
+Uncheck the box: DO NOT create an Activity class.
+
+The created project will have these files:
+    - project.properties
+    - AndroidManifest.xml now has the setting for api level minimum.
+
+
+2. Import the original project from the web site
+
+Download original eclipse project tutorial and unpack in a temporary place.
+    Let's call that place <original>.
+
+Import these items from the original tutorial:
+    
+    - Import the java source files from the original directory.
+    Select the src directory, right-click, and choose import...
+    The files come from <original>/src/com/quesucede/gameoflife.
+    
+    - **Import the AndroidManifest.xml for info on what to launch; otherwise
+    AndroidManifest.xml to specify the main activity.
+
+    - From outside of eclipse, manually copy the <original>/res/ content 
+    into project's ./res/ directory.
+    - Refresh project to eliminate errors reported from external imports.
+
+Do a Project >> Clean and rebuild to remake everything fresh.
+
+3. Create a run configuration for launching the main activity.
+
+    You need to have previously created an AVD emulator for testing.
+    Run the app on the AVD emulator.
+
+**Note: GameOfLife_0 needed to add the setting for api level requirement to 
+    AndroidManifest.xml because it initially imported that file from the
+    tutorial. (web search: specify android API level requirement for a how-to)

@@ -1,0 +1,15 @@
+./AndroidManifest.xml
+./res/layout/about.xml
+./res/layout/grid.xml
+./res/layout/main.xml
+./res/menu/menu.xml
+./res/values/arrays.xml
+./res/values/colors.xml
+./res/values/strings.xml
+./res/xml/settings.xml
+./src/com/quesucede/gameoflife/AboutActivity.java
+./src/com/quesucede/gameoflife/GridActivity.java
+./src/com/quesucede/gameoflife/GridView.java
+./src/com/quesucede/gameoflife/Life.java
+./src/com/quesucede/gameoflife/MainActivity.java
+./src/com/quesucede/gameoflife/PreferencesActivity.java
